@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>cell</name>
+   <tag></tag>
+   <elementGuidId>0369d90a-a8e6-42dc-a895-8395a5f04a58</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//table/tbody/tr[${trIndex}]/td[${tdIndex}]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//table/tbody/tr[${trIndex}]/td[${tdIndex}]</value>
+   </webElementProperties>
+</WebElementEntity>

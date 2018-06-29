@@ -10,7 +10,7 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://demoaut-mimic.kazurayam.com/7520_testbed.html')
 
-WebUI.verifyElementPresent(findTestObject('Page_Discussion 17958/td_415074'), 10, FailureHandling.STOP_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('Page_Discussion 7520/td_415074'), 10, FailureHandling.STOP_ON_FAILURE)
 
 List<Map<String,String>> expectedContents = [
 	["CID":"1", "Campain":"dummy", "Clicks": "dummy"],
@@ -21,9 +21,11 @@ List<Map<String,String>> expectedContents = [
 	["CID":"415074", "Campain":"Money Map Press", "Clicks": "1"]
 ]
 
-List<WebElement> TRs =  CustomKeywords.
-    'com.kazurayam.ksbackyard.FindElementsByXPath.getWebElementsAsList'(
-        '/html/body/div[@class="container"]/table/tbody/tr[1]/td/div/div[8]/div/table/tbody/tr')
+//List<WebElement> TRs =  CustomKeywords.
+//    'com.kazurayam.ksbackyard.FindElementsByXPath.getWebElementsAsList'(
+//        '/html/body/div[@class="container"]/table/tbody/tr[1]/td/div/div[8]/div/table/tbody/tr')
+List<WebElement> TRs = WebUI.findWebElements(findTestObject("Page_/TRs"), 10)
+
 WebUI.comment("TRs.size()=${TRs.size}")
 
 for (int i = 0; i < TRs.size(); i++) {
